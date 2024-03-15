@@ -63,7 +63,7 @@ A58. handshaking.
 A59. walking towards each other.
 A60. walking apart from each other.
 
-## Two evaluation criteria
+## Two different criteria
 The NTU datasets uses two different division criteria when dividing the training set and the test set.
 
 ### Cross-Subject
