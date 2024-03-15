@@ -1,8 +1,8 @@
 # Intro
-This dataset contains 60 types of actions, with a total of 56,880 samples. Among them, 40 classes are daily activities, 9 classes are health-related actions, and 11 classes are interactions between two individuals. These actions were performed by individuals aged from 10 to 35 years old. The dataset was collected using Microsoft Kinect v2 sensors, with data captured from three different camera angles. The collected data includes depth information, 3D skeletal information, RGB frames, and infrared sequences.
+- This dataset contains 60 types of actions, with a total of 56,880 samples. Among them, 40 classes are daily activities, 9 classes are health-related actions, and 11 classes are interactions between two individuals. These actions were performed by individuals aged from 10 to 35 years old. The dataset was collected using Microsoft Kinect v2 sensors, with data captured from three different camera angles. The collected data includes depth information, 3D skeletal information, RGB frames, and infrared sequences.
 
 ## 60 types of actions
-A1. drink water.
+- A1. drink water.
 A2. eat meal/snack.
 A3. brushing teeth.
 A4. brushing hair.
@@ -62,3 +62,14 @@ A57. touch other person's pocket.
 A58. handshaking.
 A59. walking towards each other.
 A60. walking apart from each other.
+
+## Two evaluation criteria
+The NTU datasets uses two different division criteria when dividing the training set and the test set.
+
+### Cross-Subject
+Cross-Subject divides the training set and the test set according to the character ID. The training set has 40320 samples and the test set has 16560 samples. The character IDs are 1, 2, 4, 5, 8, 9, 13, 14, 15,16 , 17, 18, 19, 25, 27, 28, 31, 34, 35, 38, 20 people are used as the training set, and the rest are used as the test set.
+
+### Cross-View
+The training set and the test set are divided by camera. The samples collected by camera 1 are used as the test set, and cameras 2 and 3 are used as the training set. The number of samples is 18960 and 37920 respectively.
+Speaking of cameras, we have to talk about the camera setting rules. The vertical heights of the three cameras are the same, and the horizontal angles are -45°, 0° and 45° respectively. Each action executor performs the same action twice. , facing the camera on the left once and facing the camera on the right once, which means that in the end, 2×3 information from different angles will be collected. Finally, set different camera heights and distances to increase the diversity of viewing angles, and assign a setting number (1-17)
+![camera different sets](pics/1.png)
