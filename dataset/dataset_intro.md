@@ -72,4 +72,22 @@ Cross-Subject divides the training set and the test set according to the charact
 ### Cross-View
 The training set and the test set are divided by camera. The samples collected by camera 1 are used as the test set, and cameras 2 and 3 are used as the training set. The number of samples is 18960 and 37920 respectively.
 Speaking of cameras, we have to talk about the camera setting rules. The vertical heights of the three cameras are the same, and the horizontal angles are -45°, 0° and 45° respectively. Each action executor performs the same action twice. , facing the camera on the left once and facing the camera on the right once, which means that in the end, 2×3 information from different angles will be collected. Finally, set different camera heights and distances to increase the diversity of viewing angles, and assign a setting number (1-17)  
-![camera different sets](pics/1.png)
+![camera different sets](../pics/1.png)
+
+- The method I use to divide the training set and test set is based on different cameras' view.
+
+# File naming rules and data structure
+Take the S001C001P001R001A001.skeleton file as an example:  
+S is followed by the setting number (1-17)  
+C is followed by the camera ID (1-3)  
+P is followed by the character ID (1-40)  
+R is followed by the number of times the action is executed (1-2)  
+A is followed by the classification of the action (1-60)  
+
+![S001C001P001R001A001.skeleton](../pics/2.png)  
+- The first line is the frame number of the sample  
+- Line 2 The number of people performing the action  
+- There are 10 data in line 3 representing 'bodyID', 'clipedEdges', 'handLeftConfidence', 'handLeftState', 'handRightConfidence', 'handRightState', 'isResticted', 'leanX', 'leanY', 'trackingState'  
+- Line 4 represents the number of joint points  
+- Lines 5-29 contain information about 25 joint points. Each joint point has 12 data, representing 'x', 'y', 'z', 'depthX', 'depthY', 'colorX', 'colorY' respectively. ,'orientationW', 'orientationX', 'orientationY','orientationZ', 'trackingState'  
+- The above is the information of one frame, and other frames are represented in the above way.
