@@ -1,8 +1,8 @@
 # RoyChenProject2024
 
 ## Project Title
-Skeleton-Based Human Action Real-Time Recognition in RGB+D Videos:  
-A Comparative Study on Machine and Deep Learning Approaches
+Skeleton-Based Human Action Recognition in Videos:  
+A Comparative Study on ML and DL Approaches
 
 ### Datasets Used
 - ["NTU RGB+D" action recognition datasets](https://rose1.ntu.edu.sg/dataset/actionRecognition/) (Requires request)
