@@ -102,7 +102,7 @@ def Print2D(num_frame, point, arms, rightHand, leftHand, legs, body):
         plt.plot(point[0, i, body, 1], point[1, i, body, 1], c='green', lw=2.0)
  
         plt.text(xmax, ymax+0.2, 'frame: {}/{}'.format(i, num_frame-1)) # Text description
-                plt.xlim(xmin-0.5, xmax+0.5) # x-axis range
+        plt.xlim(xmin-0.5, xmax+0.5) # x-axis range
         plt.ylim(ymin-0.3, ymax+0.3) # y-axis range
         plt.pause(0.001) # pause delay
  
@@ -166,7 +166,7 @@ def Print3D(num_frame, point, arms, rightHand, leftHand, legs, body):
 ## Main Function
 def main():
     sys.path.extend(['../'])  # Extend paths
-    data_path = '../dataset/S001C001P001R001A001.skeleton' 
+    data_path = './dataset/S001C001P001R001A001.skeleton' 
     point = read_xyz(data_path)   # Read x, y, z coordinates
     print('Read Data Done!') # Data reading done
  
