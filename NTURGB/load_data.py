@@ -3,12 +3,12 @@ import pickle
 import os
 
 # read file for training datasets and test datasets
-train_data = np.load('dataset/NTU-RGB-D/xview/train_data.npy')
-test_data = np.load('dataset/NTU-RGB-D/xview/val_data.npy')
+train_data = np.load('../dataset/NTU-RGB-D/xview/train_data.npy')
+test_data = np.load('../dataset/NTU-RGB-D/xview/val_data.npy')
 # read file for training labels and test labels
-with open ('dataset/NTU-RGB-D/xview/train_label.pkl', 'rb') as f:
+with open ('../dataset/NTU-RGB-D/xview/train_label.pkl', 'rb') as f:
     train_label = pickle.load(f)
-with open ('dataset/NTU-RGB-D/xview/val_label.pkl', 'rb') as f:
+with open ('../dataset/NTU-RGB-D/xview/val_label.pkl', 'rb') as f:
     test_label = pickle.load(f)
 
 # print the shape of train_data and the length of train_label[0] and train_label[1]

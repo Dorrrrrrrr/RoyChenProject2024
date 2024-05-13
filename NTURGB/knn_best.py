@@ -10,12 +10,12 @@ from sklearn.metrics import roc_curve, roc_auc_score, confusion_matrix, classifi
 # The explained variance ratio calculated by pca.py with 0.90 is 13, but it feels too low, so it's increased to 30
 n_low = 30
 # Load the train_data.npy file
-train_data = np.load('dataset/NTU-RGB-D/xview/train_data.npy')
-test_data = np.load('dataset/NTU-RGB-D/xview/val_data.npy')
+train_data = np.load('../dataset/NTU-RGB-D/xview/train_data.npy')
+test_data = np.load('../dataset/NTU-RGB-D/xview/val_data.npy')
 # Load the train_label.pkl file
-with open('dataset/NTU-RGB-D/xview/train_label.pkl', 'rb') as f:
+with open('../dataset/NTU-RGB-D/xview/train_label.pkl', 'rb') as f:
     train_label = pickle.load(f)
-with open('dataset/NTU-RGB-D/xview/val_label.pkl', 'rb') as f:
+with open('../dataset/NTU-RGB-D/xview/val_label.pkl', 'rb') as f:
     test_label = pickle.load(f)
 
 X_train = train_data.reshape(train_data.shape[0],-1)

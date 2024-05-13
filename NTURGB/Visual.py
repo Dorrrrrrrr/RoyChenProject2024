@@ -166,7 +166,7 @@ def Print3D(num_frame, point, arms, rightHand, leftHand, legs, body):
 ## Main Function
 def main():
     sys.path.extend(['../'])  # Extend paths
-    data_path = './dataset/S001C001P001R001A001.skeleton' 
+    data_path = '../dataset/S001C001P001R001A001.skeleton' 
     point = read_xyz(data_path)   # Read x, y, z coordinates
     print('Read Data Done!') # Data reading done
  

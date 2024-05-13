@@ -5,12 +5,12 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
 # read file for training datasets and test datasets
-train_data = np.load('dataset/NTU-RGB-D/xview/train_data.npy')
-test_data = np.load('dataset/NTU-RGB-D/xview/val_data.npy')
+train_data = np.load('../dataset/NTU-RGB-D/xview/train_data.npy')
+test_data = np.load('../dataset/NTU-RGB-D/xview/val_data.npy')
 # read file for training labels and test labels (opening file in binary mode for reading)
-with open ('dataset/NTU-RGB-D/xview/train_label.pkl', 'rb') as f:
+with open ('../dataset/NTU-RGB-D/xview/train_label.pkl', 'rb') as f:
     train_label = pickle.load(f)
-with open ('dataset/NTU-RGB-D/xview/val_label.pkl', 'rb') as f:
+with open ('../dataset/NTU-RGB-D/xview/val_label.pkl', 'rb') as f:
     test_label = pickle.load(f)
     
 X_train = train_data.reshape(train_data.shape[0],-1)
