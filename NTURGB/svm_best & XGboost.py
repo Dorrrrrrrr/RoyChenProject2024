@@ -173,4 +173,17 @@ print(classification_report(y_test_selected, y_pred))
 # average_accuracy = np.mean(accuracy_scores)
 # print("Average Accuracy:", average_accuracy)
 
+# Calculate the confusion matrix for XGBoost
+xgb_conf_matrix = confusion_matrix(y_test_mapped, y_pred_xgb)
+
+# Plot the confusion matrix
+plt.figure()
+plt.imshow(xgb_conf_matrix, interpolation='nearest', cmap=plt.cm.Blues)
+plt.title('Confusion Matrix for XGBoost')
+plt.colorbar()
+plt.xlabel('Predicted Label')
+plt.ylabel('True Label')
+plt.savefig('Confusion Matrix for XGBoost')
+plt.show()
+
 
